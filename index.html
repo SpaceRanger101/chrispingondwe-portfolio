@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chrispin Gondwe — Portfolio</title>
+  <meta name="description" content="Portfolio of Chrispin Gondwe — Computer Engineer. Projects, skills, and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="#home" class="brand">Chrispin Gondwe</a>
+
+    <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode" title="Toggle theme">
+      <svg class="icon sun" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.8 1.42-1.42zm10.48 14.32l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM12 4V1h-0v3h0zm0 19v-3h0v3h0zM4 12H1v0h3v0zm19 0h-3v0h3v0zM6.76 19.16l-1.42 1.42-1.79-1.8 1.41-1.41 1.8 1.79zM19.16 6.76l1.42-1.42-1.8-1.79-1.41 1.41 1.79 1.8zM12 7a5 5 0 100 10 5 5 0 000-10z"/>
+      </svg>
+      <svg class="icon moon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+      </svg>
+    </button>
+
+    <button id="menu-toggle" class="icon-btn mobile-only" aria-label="Toggle menu" aria-expanded="false">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/>
+      </svg>
+    </button>
+
+    <nav id="nav" class="nav">
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.linkedin.com/in/chrispin-gondwe-558790334" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+        LinkedIn
+      </a>
+    </nav>
+  </header>
+
+  <main id="home" class="section hero">
+    <div class="hero-content">
+      <h1>Computer Engineer & Builder</h1>
+      <p>
+        I design and build clean, efficient software — from web apps to data tools.
+        Scroll down to explore featured projects and get in touch.
+      </p>
+      <div class="cta">
+        <a href="#projects" class="btn">See Projects</a>
+        <a href="https://github.com/your-github-username" target="_blank" rel="noopener" class="btn ghost">GitHub Profile</a>
+      </div>
+    </div>
+  </main>
+
+  <section id="projects" class="section">
+    <h2>Featured Projects</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="card-body">
+          <h3>StyleShop</h3>
+          <p>Step into Style Shop, a modern and elegant e-commerce platform built to bring fashion closer to everyone. Whether it’s Vans sneakers, golf shirts, gaming gear, or wellness essentials, Style Shop offers a sleek browsing experience, secure checkout, and a design that looks great on any device.).</p>
+          <div class="tags">
+            <span>React</span><span>Node.js</span><span>MySQL</span><span>Tailwind</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a class="btn small" target="_blank" rel="noopener" href="https://github.com/SpaceRanger101/shop-portfolio">View on GitHub</a>
+          <a class="btn small ghost" target="_blank" rel="noopener" href="https://spaceranger101.github.io/shop-portfolio/">Live Demo</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3>HR Management System</h3>
+          <p>Employee records, leave, payroll basics and role-based access in a simple web app. (still under development)</p>
+          <div class="tags">
+            <span>React</span><span>HTML</span><span>Vite</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a class="btn small" target="_blank" rel="noopener" href="https://github.com/SpaceRanger101/hrms-frontend">View on GitHub</a>
+          <a class="btn small ghost" target="_blank" rel="noopener" href="https://SpaceRanger101.github.io/hrms-frontend">Live Demo</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <h3>Car Dodging Web Game</h3>
+          <p>Endless runner with collisions, 3 lives, and replay button. Built for the browser.(under development)</p>
+          <div class="tags">
+            <span>HTML5</span><span>Canvas</span><span>JavaScript</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a class="btn small" target="_blank" rel="noopener" href="https://github.com/SpaceRanger101/Car-Dodging-Web-Game">View on GitHub</a>
+          <a class="btn small ghost" target="_blank" rel="noopener" href="https://spaceranger101.github.io/Car-Dodging-Web-Game/">Play</a>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About</h2>
+    <p>
+      I'm Chrispin Gondwe, a Computer Engineering graduate (2023, DMI St. John the Baptist University).
+      I enjoy turning ideas into working products: clean UI, robust APIs, and data-driven logic.
+      I'm actively looking for roles where I can contribute to real-world software and keep learning fast.
+    </p>
+    <ul class="bullets">
+      <li>Strong fundamentals: JS/TS, React, Node.js, SQL.</li>
+      <li>Comfortable with Git, testing, and deployment.</li>
+      <li>Built systems for inventory, HR, microfinance tools, and games.</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2>Contact</h2>
+    <p>Send me a message — it goes straight to my inbox via EmailJS.</p>
+
+    <form id="contact-form">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input id="name" name="user_name" type="text" placeholder="Your name" required />
+      </div>
+
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input id="email" name="user_email" type="email" placeholder="you@example.com" required />
+      </div>
+
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="How can I help?" required></textarea>
+      </div>
+
+      <button id="send-btn" type="submit" class="btn">Send Message</button>
+    </form>
+
+    <div class="subtle">
+      Or reach me on
+      <a href="https://www.linkedin.com/in/chrispin-gondwe-558790334" target="_blank" rel="noopener">LinkedIn</a>.
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Chrispin Gondwe. All rights reserved.</small>
+  </footer>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
