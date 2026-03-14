@@ -240,8 +240,24 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
-      nav ul { gap: 16px; }
-      .project-card { width: 100%; }
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding-top: 10px;
+      }
+
+      .hero {
+        padding: 60px 0 40px;
+      }
+
+      .project-card {
+        width: 100%;
+      }
     }
   </style>
 </head>

@@ -9,7 +9,8 @@
 body {
     background: white;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 header {
     position: absolute;
@@ -38,4 +39,40 @@ header {
 .navigation a:hover {
     background: rgb(235, 231, 229);
     color: white;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 24px;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .navigation {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: flex-end;
+    }
+
+    .navigation a {
+        margin: 0;
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .navigation {
+        justify-content: flex-start;
+    }
 }
