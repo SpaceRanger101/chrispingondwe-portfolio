@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novarise Tech</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Inter', sans-serif;
+  background:#F5F7F6;
+  color:#111;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 0;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:30px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+}
+
+.hero{
+  text-align:center;
+  padding:80px 0;
+}
+
+.hero h1{
+  font-family:'Poppins', sans-serif;
+  font-size:48px;
+  line-height:1.2;
+}
+
+.hero span{
+  color:#0F3D3E;
+}
+
+.hero p{
+  color:#666;
+  margin:20px 0 60px 0;
+}
+
+/* PROJECT CARDS */
+.projects{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.project-card{
+  background:white;
+  width:320px;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  transition:0.4s ease;
+}
+
+.project-card:hover{
+  transform:translateY(-15px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.project-card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.project-card img:hover{
+  opacity:0.85;
+}
+
+.project-content{
+  padding:25px;
+  text-align:left;
+}
+
+.project-content h3{
+  font-family:'Poppins';
+  margin-bottom:10px;
+  font-size:20px;
+}
+
+.project-content p{
+  color:#666;
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* DARK SECTION */
+.dark-section{
+  background:#0E2F2F;
+  color:white;
+  padding:100px 0;
+  margin-top:100px;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  margin-top:60px;
+}
+
+.service-card{
+  background:#144545;
+  padding:30px;
+  border-radius:20px;
+  transition:0.3s;
+}
+
+.service-card:hover{
+  transform:translateY(-5px);
+}
+
+/* IMAGE MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  z-index:999;
+  padding-top:60px;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.9);
+}
+
+.modal-content{
+  display:block;
+  max-width:90%;
+  max-height:85vh;   /*for mobile */
+  margin:auto;
+  border-radius:15px;
+  object-fit:contain;
+  animation:zoom 0.3s ease;
+}
+
+.close{
+  position:absolute;
+  top:20px;
+  right:40px;
+  color:white;
+  font-size:40px;
+  cursor:pointer;
+}
+
+@keyframes zoom{
+  from{transform:scale(0.7);}
+  to{transform:scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<nav>
+  <h2>Novarise</h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <h1>The Future of Design with <span>Smart Technology</span></h1>
+  <p>Expert digital solutions to elevate your brand identity.</p>
+
+  <div class="projects">
+
+    <div class="project-card">
+      <img src="images/NOVARISE.png" alt="Dashboard Mockup">
+      <div class="project-content">
+        <h3>Novarise Corp sticker</h3>
+        <p>A modern business sticker for Brand awareness, Marketing, Product identification and Brand visibility.</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="images/zinziri poster.jpg" alt="Ecommerce Mockup">
+      <div class="project-content">
+        <h3>Zinziri Poster</h3>
+        <p>Poster Design for Zinziri, a product of Unity Farm Ventures. The design highlightsthe freshness and quality of the locally grown zinziri, with a beautiful visual representation.</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="images/IMG-20260303-WA0010.jpg" alt="HR System Mockup">
+      <div class="project-content">
+        <h3>HAMBARICHO Fast food Poster</h3>
+        <p>A poster design for HAMBARICHO, a fast food joint blending different flavours. The design features bold colours and graphics, showcasing their signature dishesin a vibrant and appetizing way</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<section class="dark-section">
+<div class="container">
+  <h2 style="text-align:center;font-family:'Poppins';font-size:36px;">
+    Efficient & Integrated Creative Services
+  </h2>
+
+  <div class="services">
+
+     <div class="service-card">
+      <h3>UI/UX Design</h3>
+      <p>Modern web and mobile interface design.</p>
+    </div>
+    <div class="service-card">
+      <h3>Motion Graphic Designs</h3>
+      <p>Professional motion graphics.</p>
+    </div>
+    <div class="service-card">
+      <h3>Brand Identity</h3>
+      <p>Complete logo and visual identity systems.</p>
+    </div>
+    
+   
+  </div>
+</div>
+</section>
+
+<!-- IMAGE MODAL -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+<script>
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const images = document.querySelectorAll(".project-card img");
+const closeBtn = document.querySelector(".close");
+
+images.forEach(img => {
+  img.addEventListener("click", function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  });
+});
+
+closeBtn.onclick = function(){
+  modal.style.display = "none";
+};
+
+modal.onclick = function(e){
+  if(e.target === modal){
+    modal.style.display = "none";
+  }
+};
+</script>
+
+</body>
+</html>
