@@ -116,6 +116,74 @@
       fill: rgba(255, 255, 255, 0.85);
     }
 
+    .card-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-icon img.zoomable {
+      cursor: zoom-in;
+    }
+
+    /* ── IMAGE LIGHTBOX ── */
+    .lightbox-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .lightbox-overlay.active {
+      display: flex;
+    }
+
+    .lightbox-overlay img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .lightbox-close {
+      position: fixed;
+      top: 20px;
+      right: 24px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      border: none;
+      font-size: 24px;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-close:hover {
+      background: rgba(255, 255, 255, 0.28);
+    }
+
+    @media (max-width: 600px) {
+      .lightbox-overlay {
+        padding: 12px;
+      }
+
+      .lightbox-close {
+        top: 12px;
+        right: 12px;
+      }
+    }
+
     .project-content {
       padding: 24px;
       flex: 1;
@@ -287,28 +355,27 @@
       <!-- Card 1 -->
       <div class="project-card">
         <div class="card-icon">
-          <!-- Android robot icon (SVG) -->
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.18 15.64a2.18 2.18 0 0 1-2.18-2.18V9.19a2.18 2.18 0 1 1 4.36 0v4.27a2.18 2.18 0 0 1-2.18 2.18zm11.64 0a2.18 2.18 0 0 1-2.18-2.18V9.19a2.18 2.18 0 1 1 4.36 0v4.27a2.18 2.18 0 0 1-2.18 2.18zM15.88 18l1.54 1.54a.75.75 0 1 1-1.06 1.06L14.7 18.94A6.51 6.51 0 0 1 12 19.5a6.51 6.51 0 0 1-2.7-.56l-1.66 1.66a.75.75 0 1 1-1.06-1.06L8.12 18A6.5 6.5 0 0 1 5.5 12.5V12h13v.5A6.5 6.5 0 0 1 15.88 18zM8.5 14a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm7 0a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zM15.53 4.35l1.2-1.2a.75.75 0 1 0-1.06-1.06l-1.38 1.38A6.47 6.47 0 0 0 12 3a6.47 6.47 0 0 0-2.29.47L8.33 2.09a.75.75 0 0 0-1.06 1.06l1.2 1.2A6.5 6.5 0 0 0 5.5 10H18.5a6.5 6.5 0 0 0-2.97-5.65z"/>
-          </svg>
+          <img src="images/TO DO LIST.jpg" alt="TO DO APP" class="zoomable" onclick="openLightbox(this)">
         </div>
         <div class="project-content">
-          <h3>1st App</h3>
-          <p>Description.</p>
+          <h3>TO DO APP</h3>
+          <p>A simple and responsive To-Do List application designed to help users organize, manage, and track their daily tasks. 
+            Users can add, edit, complete, and delete tasks through a clean and intuitive interface. 
+            Built as a practical project to demonstrate modern web development skills and user-friendly UI design.(still under development)</p>
           <div class="tags">
-            <span>language 1</span><span>language 2</span><span>language 3</span>
+            <span>KOTLIN</span><span>JAVA</span>
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://github.com/SpaceRanger101" target="_blank" rel="noopener" class="btn btn-primary">GitHub</a>
-          <a href="#" class="btn btn-ghost">Details</a>
+          <a href="https://github.com/SpaceRanger101/To_Do_List" target="_blank" rel="noopener" class="btn btn-primary">GitHub</a>
+          <a href="https://github.com/SpaceRanger101/To_Do_List/releases/download/To_Do_List/app-debug.apk" download class="btn btn-ghost">Download</a>
         </div>
       </div>
 
       <!-- Card 2 -->
       <div class="project-card">
         <div class="card-icon" style="background: linear-gradient(135deg, #1a3a5c 0%, #2a6496 100%);">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 24 24" xmlns="">
             <path d="M6.18 15.64a2.18 2.18 0 0 1-2.18-2.18V9.19a2.18 2.18 0 1 1 4.36 0v4.27a2.18 2.18 0 0 1-2.18 2.18zm11.64 0a2.18 2.18 0 0 1-2.18-2.18V9.19a2.18 2.18 0 1 1 4.36 0v4.27a2.18 2.18 0 0 1-2.18 2.18zM15.88 18l1.54 1.54a.75.75 0 1 1-1.06 1.06L14.7 18.94A6.51 6.51 0 0 1 12 19.5a6.51 6.51 0 0 1-2.7-.56l-1.66 1.66a.75.75 0 1 1-1.06-1.06L8.12 18A6.5 6.5 0 0 1 5.5 12.5V12h13v.5A6.5 6.5 0 0 1 15.88 18zM8.5 14a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm7 0a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zM15.53 4.35l1.2-1.2a.75.75 0 1 0-1.06-1.06l-1.38 1.38A6.47 6.47 0 0 0 12 3a6.47 6.47 0 0 0-2.29.47L8.33 2.09a.75.75 0 0 0-1.06 1.06l1.2 1.2A6.5 6.5 0 0 0 5.5 10H18.5a6.5 6.5 0 0 0-2.97-5.65z"/>
           </svg>
         </div>
@@ -386,8 +453,36 @@
   </p>
 </footer>
 
+<!-- IMAGE LIGHTBOX -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  function openLightbox(imgEl) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.src = imgEl.src;
+    lightboxImg.alt = imgEl.alt;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(e) {
+    if (e.target.id === 'lightbox-img') return;
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
 </script>
 
 </body>
